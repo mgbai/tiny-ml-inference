@@ -1,0 +1,15 @@
+apiVersion: build.pivotal.io/v1alpha1
+kind: Image
+metadata:
+  name: tiny-ml-inference
+  namespace: default
+spec:
+  tag: marygabry1508/tiny-ml-inference:v1  # where to push the built image
+  builder:
+    kind: ClusterBuilder
+    name: default  # or tbs-full
+  source:
+    git:
+      url: git@github.com:mgbai/tiny-ml-inference.git
+      revision: main
+  serviceAccount: default  # or one with image-push permissions
