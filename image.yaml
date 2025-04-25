@@ -6,8 +6,8 @@ metadata:
 spec:
   tag: marygabry1508/tiny-ml-inference:v1  # where to push the built image
   builder:
-    kind: ClusterBuilder
-    name: default  # or tbs-full
+    kind: Builder
+    name: my-builder  # or tbs-full
   source:
     git:
       url: git@github.com:mgbai/tiny-ml-inference.git
